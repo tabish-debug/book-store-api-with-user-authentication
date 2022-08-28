@@ -1,6 +1,6 @@
 # `Book Store Api With User Authentication(FastApi)`
 
-I build fastapi(python) based application for book store in which you can add, delete, update and get all book. \
+I build fastapi(python) based application for book store in which you can add, delete, update and get all book.
 
 - Authenication with user
 - User refresh and access token
