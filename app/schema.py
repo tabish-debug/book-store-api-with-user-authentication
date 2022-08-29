@@ -31,8 +31,11 @@ class CreateUserSchema(UserBaseSchema):
 class CreateBookSchema(BookBaseSchema):
     user_id: Optional[str]
 
-class UpdateBookSchema(BookBaseSchema):
-    pass
+class UpdateBookSchema(BaseModel):
+    title: Optional[str]
+    description: Optional[str]
+    cover_image: Optional[str]
+    price: Optional[str]
 
 class LoginUserSchema(BaseModel):
     email: EmailStr

@@ -118,7 +118,7 @@ def books_by_user(request: CustomRequest, response: CustomResponse, page: int, p
     # Return response
     return response
 
-@router.get('/book/{id}')
+@router.get('/books/{id}')
 def book(request: CustomRequest, response: CustomResponse, id: str,
     user_id: str = Depends(oauth2.require_user), db: Session = Depends(database.get_db)):
     # Get content type header
@@ -142,7 +142,7 @@ def book(request: CustomRequest, response: CustomResponse, id: str,
     # Send response
     return response
 
-@router.put('/book/{id}')
+@router.put('/books/{id}')
 def create_book(request: CustomRequest, response: CustomResponse, payload: schema.UpdateBookSchema, 
     id: str, user_id: str = Depends(oauth2.require_user), db: Session = Depends(database.get_db)):
     # Get content type header
@@ -168,7 +168,7 @@ def create_book(request: CustomRequest, response: CustomResponse, payload: schem
     # Send response
     return response
 
-@router.delete('/book/{id}')
+@router.delete('/books/{id}')
 def delete_book(request: CustomRequest, response: CustomResponse, 
     id: str, user_id: str = Depends(oauth2.require_user), db: Session = Depends(database.get_db)):
     # Get content type header
