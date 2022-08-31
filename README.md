@@ -15,5 +15,10 @@ I build fastapi(python) based application for book store in which you can add, d
 
 ```
 docker-compose up
+```
+`OR`
+```
 docker-compose up -d
 ```
+
+`Python Love`
