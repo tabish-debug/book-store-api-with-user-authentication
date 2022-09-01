@@ -12,7 +12,7 @@ class CustomResponse(Response):
     media_type = "application/xml"
 
     def __init__(self, content: Any = None, status_code: int = 200, headers: Optional[Mapping[str, str]] = None,
-        media_type: Optional[str] = None, background: Optional[BackgroundTask] = None, custom_root='user') -> None:
+        media_type: Optional[str] = None, background: Optional[BackgroundTask] = None, custom_root: Optional[str] = 'user') -> None:
         self.custom_root = custom_root
         super().__init__(content, status_code, headers, media_type, background)
 
